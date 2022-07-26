@@ -101,7 +101,7 @@ MPT的解决方法是：
 然后运行结果如下图所示：
 我们将节点类型以及节点储存的数据输出：
 
-![image](https://user-images.githubusercontent.com/75195549/181065011-a693ccd3-d549-40ae-ad54-11bcd71076cc.png)
+![image](https://user-images.githubusercontent.com/75195549/181066072-069030f7-533a-4e60-9983-0fc69c094f03.png)
 
 
 
