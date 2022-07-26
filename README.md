@@ -91,5 +91,20 @@ MPT的解决方法是：
 在以太坊中，利用默克尔证明在轻节点中实现简单支付验证，即在无需维护具体交易信息的前提下，证明某一笔交易是否存在于区块链中。
 
 # 代码运行结果
+我的运行是在ubuntu下进行的，只需要pip install plyvel即可：
 
+
+![image](https://user-images.githubusercontent.com/75195549/181064812-23c4ff38-4454-442b-b484-ce53599df76a.png)
+
+
+
+然后运行结果如下图所示：
+我们将节点类型以及节点储存的数据输出：
+
+![image](https://user-images.githubusercontent.com/75195549/181065011-a693ccd3-d549-40ae-ad54-11bcd71076cc.png)
+
+
+
+# 参考网址
+https://easythereentropy.wordpress.com/2014/06/04/understanding-the-ethereum-trie/
 
