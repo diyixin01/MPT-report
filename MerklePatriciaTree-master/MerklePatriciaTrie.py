@@ -79,10 +79,10 @@ class MerklePatriciaTrie:
         _node_type = self.node_type(node)
         #print("Node Type:", _node_type)
         if _node_type == 'Branch':
-            #key空，直接將value 存在branch node 的最後
+            #key空，直接將value 存在branch node 的最后
             if not key:
                 node[-1] = value
-            #沿著branch node繼續往下找
+            #沿着branch node往下找
             else:   
                 new_node = self.update_and_delete(self.decode(node[key[0]]), key[1:], value)
                 node[key[0]] = self.update_db(new_node)
@@ -97,7 +97,7 @@ class MerklePatriciaTrie:
                 prefix = i + 1
             key = key[prefix:]
             ori_key = ori_key[prefix:]
-            #與現在node's key一樣
+            #和现在node's key一样
             if key == ori_key == []:
 
                 if _node_type == 'Leaf':
@@ -109,7 +109,7 @@ class MerklePatriciaTrie:
                 if _node_type == 'Extension':
                     
                     new_node = self.update_and_delete(self.decode(node[1]), key, value)
-                #如果是leaf node 開一個branch node 將原本node和new node放進新的branch
+                #如果是leaf node 来一个branch node将原本node和new node放进新的branch
                 else:
                     new_node = [""]*17
                     new_node[-1] = node[1]
@@ -125,7 +125,7 @@ class MerklePatriciaTrie:
                     else:
                         ter = True
                     new_node[ori_key[0]] = self.update_db([encoding.hex_to_hp(encoding.terminator(ori_key[1:],ter)),node[1]])
-                #if key空 value直接放進branch，else 把剩下的key value存入branch
+                #if key空 value直接放branch，else 把剩下的key value存入branch
                 if key == []:
                     new_node[-1] = value
                 else:
